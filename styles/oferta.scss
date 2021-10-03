@@ -1,0 +1,155 @@
+.container {
+  width: 100%;
+  padding: 50px 20px 20px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+
+    .header {
+      font-size: 39px;
+      font-family: 'Dela Gothic One', cursive;
+    }
+
+    .edit {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .pokoje {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      flex-wrap: wrap;
+      padding-bottom: 40px;
+      input{
+        margin-bottom:10px;
+    }
+
+      .pokoj {
+        width: 250px;
+        position: relative;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(126, 114, 9);
+        background-color: #131344;
+        margin-top: 20px;
+        box-shadow: 10px 10px 20px 0px #131344;
+      }
+
+      .pokoj-niedostepny {
+        width: 250px;
+        position: relative;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid rgb(126, 114, 9);
+        background-color: #131344;
+        margin-top: 20px;
+        box-shadow: 10px 10px 20px 0px #131344;
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   width: 100%;
+        //   height: 100%;
+        //   top: 0;
+        //   left: 0;
+        //   background-color: rgba(0, 0, 0, 0.5);
+        // }
+      }
+
+      .pokoj,
+      .pokoj-niedostepny {
+        position: relative;
+        transition: 0.4s ease;
+        cursor: pointer;
+        padding-bottom: 40px;
+
+        .edit-price {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.4s ease;
+        }
+
+        .title {
+          font-size: 30px;
+          text-transform: uppercase;
+          font-family: 'Dela Gothic One', cursive;
+        }
+
+        .cena {
+          padding: 10px 0;
+        }
+      }
+    }
+
+    .oferty {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      flex-wrap: wrap;
+      position: relative;
+
+      .oferta {
+        position: relative;
+        width: 250px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #fff;
+        background-color: #03461e;
+        margin-top: 20px;
+        transition: 0.4s ease;
+        cursor: pointer;
+        box-shadow: 10px 10px 20px 0px #03461e;
+
+        &:hover {
+          transform: scale(1.1);
+          transition: 0.4s ease;
+        }
+
+        .title {
+          font-size: 30px;
+          text-transform: uppercase;
+          font-family: 'Dela Gothic One', cursive;
+        }
+
+        .cena {
+          padding: 10px 0;
+        }
+
+        .delete-offer {
+          position: absolute;
+          bottom: 10px;
+          right: 10px;
+        }
+
+        .tresc-opisu {
+          padding: 10px 0 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 50px 100px 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 50px 200px 20px;
+  }
+}

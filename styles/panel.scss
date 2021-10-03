@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  padding: 50px 20px 20px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+
+    table {
+      width: 100%;
+      border-spacing: 0;
+
+      tr {
+        height: 50px;
+      }
+
+      .naglowek {
+        background-color: rgba(blue, 0.7);
+        height: 50px;
+      }
+      .tr-with-borders{
+        border: 2px 0 solid white;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 50px 100px 20px;
+    .add-info{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      textarea{
+        width: 80%;
+        word-wrap: break-word;
+        word-break: break-all;
+        max-width: 300px;
+        height: 70px;
+        max-height: 100px;
+        background: transparent;
+        color: white;
+      }
+    }
+    table {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 50px 200px 20px;
+  }
+}

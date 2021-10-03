@@ -1,0 +1,46 @@
+.container {
+  width: 100%;
+  padding: 50px 20px 20px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 30px 100px;
+
+    .title {
+      font-size: 39px;
+      font-family: 'Dela Gothic One', cursive;
+      padding-bottom: 30px;
+    }
+
+    .image {
+      height: 300px;
+      width: 100%;
+      background-image: url("../images/hotel.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 50px 100px 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 50px 200px 20px;
+
+    .content {
+      padding: 30px 100px;
+    }
+  }
+}

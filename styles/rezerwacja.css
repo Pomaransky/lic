@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  padding: 50px 20px 20px;
+}
+.container .content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 30px;
+}
+.container .content .item {
+  padding: 10px 0;
+}
+.container .content .table {
+  color: white;
+}
+.container .content .table .bg-green {
+  height: 50px;
+  background-color: rgba(0, 128, 0, 0.7);
+}
+.container .content .table .bg-blue {
+  height: 50px;
+  background-color: rgba(0, 0, 255, 0.7);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 50px 100px 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    padding: 50px 200px 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .container .content .table .bg-xxl-green {
+    height: 50px;
+    background-color: rgba(0, 128, 0, 0.7);
+  }
+  .container .content .table .bg-xxl-blue {
+    height: 50px;
+    background-color: rgba(0, 0, 255, 0.7);
+  }
+}/*# sourceMappingURL=rezerwacja.css.map */

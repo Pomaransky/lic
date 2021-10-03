@@ -1,0 +1,131 @@
+.container {
+  width: 100%;
+  padding: 50px 20px 20px;
+}
+.container .content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 30px;
+}
+.container .content .header {
+  font-size: 39px;
+  font-family: "Dela Gothic One", cursive;
+}
+.container .content .edit {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.container .content .pokoje {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+.container .content .pokoje input {
+  margin-bottom: 10px;
+}
+.container .content .pokoje .pokoj {
+  width: 250px;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #7e7209;
+  background-color: #131344;
+  margin-top: 20px;
+  box-shadow: 10px 10px 20px 0px #131344;
+}
+.container .content .pokoje .pokoj-niedostepny {
+  width: 250px;
+  position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #7e7209;
+  background-color: #131344;
+  margin-top: 20px;
+  box-shadow: 10px 10px 20px 0px #131344;
+}
+.container .content .pokoje .pokoj,
+.container .content .pokoje .pokoj-niedostepny {
+  position: relative;
+  transition: 0.4s ease;
+  cursor: pointer;
+  padding-bottom: 40px;
+}
+.container .content .pokoje .pokoj .edit-price,
+.container .content .pokoje .pokoj-niedostepny .edit-price {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.container .content .pokoje .pokoj:hover,
+.container .content .pokoje .pokoj-niedostepny:hover {
+  transform: scale(1.1);
+  transition: 0.4s ease;
+}
+.container .content .pokoje .pokoj .title,
+.container .content .pokoje .pokoj-niedostepny .title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "Dela Gothic One", cursive;
+}
+.container .content .pokoje .pokoj .cena,
+.container .content .pokoje .pokoj-niedostepny .cena {
+  padding: 10px 0;
+}
+.container .content .oferty {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  position: relative;
+}
+.container .content .oferty .oferta {
+  position: relative;
+  width: 250px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background-color: #03461e;
+  margin-top: 20px;
+  transition: 0.4s ease;
+  cursor: pointer;
+  box-shadow: 10px 10px 20px 0px #03461e;
+}
+.container .content .oferty .oferta:hover {
+  transform: scale(1.1);
+  transition: 0.4s ease;
+}
+.container .content .oferty .oferta .title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "Dela Gothic One", cursive;
+}
+.container .content .oferty .oferta .cena {
+  padding: 10px 0;
+}
+.container .content .oferty .oferta .delete-offer {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.container .content .oferty .oferta .tresc-opisu {
+  padding: 10px 0 40px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 50px 100px 20px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    padding: 50px 200px 20px;
+  }
+}/*# sourceMappingURL=oferta.css.map */

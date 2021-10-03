@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  padding: 50px 20px 20px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+
+    .item {
+      padding-top: 10px;
+    }
+
+    .g-recaptcha {
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .regulamin {
+      color: red;
+      font-style: italic;
+      text-decoration: underline red;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 50px 100px 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding: 50px 200px 20px;
+  }
+}

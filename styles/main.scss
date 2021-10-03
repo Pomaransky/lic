@@ -1,0 +1,248 @@
+$color-dark: #171717;
+$color-white: #ffffff;
+$color-navy-blue: rgb(19, 19, 68);
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: $color-dark;
+    padding: 0;
+    margin: 0;
+    background-image: url('../images/zamosc.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hamburger {
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+}
+
+.hamburger,
+.navigation {
+    transition: transform 0.3s 0.1s ease-in-out;
+    z-index: 999;
+    position: fixed;
+}
+
+.hamburger--active {
+    transform: translatex(250px);
+    // position: fixed;
+    // z-index: 999;
+}
+
+.hamburger__box {
+    width: 35px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+@mixin hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: $color-white;
+    position: absolute;
+}
+
+.hamburger__inner {
+    @include hamburger-line;
+
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.1s 0.2s ease-in-out;
+}
+
+.hamburger__inner::before,
+.hamburger__inner::after {
+    @include hamburger-line;
+
+    content: "";
+    left: 0;
+    transition: transform 0.2s 0.2s ease-in-out;
+}
+
+.hamburger__inner::before {
+    top: -10px;
+}
+
+.hamburger__inner::after {
+    top: 10px;
+}
+
+.hamburger--active .hamburger__inner {
+    background-color: transparent;
+}
+
+.hamburger--active .hamburger__inner:before {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger--active .hamburger__inner:after {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.navigation {
+    height: 100vh;
+    width: 250px;
+    color: $color-white;
+    background-color: #101010;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-250px);
+    z-index: 99;
+
+    .if-logged {
+        position: absolute;
+        bottom: 0;
+        padding: 50px 40px;
+    }
+}
+
+.navigation--active {
+    transform: translateX(0px);
+}
+
+.navigation__list {
+    margin-top: 50px;
+    list-style: none;
+}
+
+.navigation__item {
+    margin-bottom: 20px;
+
+    a {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
+
+.formularz {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    width: 100%;
+}
+
+button {
+    border: 0;
+    border-radius: 3px !important;
+    cursor: pointer;
+    outline: 0;
+    padding: 5px;
+}
+
+input {
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.sukces {
+    color: green;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.btn-green {
+    background-color: rgba(green, 0.6);
+    color: #fff;
+
+    &:hover {
+        background-color: green;
+    }
+}
+
+.btn-red {
+    background-color: rgba(red, 0.6);
+
+    &:hover {
+        background-color: red;
+    }
+
+    color: #fff;
+}
+
+.btn-blue {
+    background-color: rgba($color-navy-blue, 0.6);
+
+    &:hover {
+        background-color: #2323c7;
+    }
+
+    color: #fff;
+}
+
+.color-white {
+    color: #ffffff;
+}
+
+.color-dark {
+    color: #171717;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.font-small {
+    font-size: 16px;
+}
+
+.font-medium {
+    font-size: 22px;
+}
+
+.font-size-large {
+    font-size: 31px;
+}
+
+@media (min-width: 768px) {
+    .font-small {
+        font-size: 22px;
+    }
+
+    .font-size-large {
+        font-size: 39px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .font-size-large {
+        font-size: 48px;
+    }
+}
